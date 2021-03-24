@@ -12,9 +12,13 @@
       :root {
          --white: #e8f1f2ff;
          --green: #69cc78ff;
-         --grey: #909099ff;
+         --lightgrey: #909099ff;
+         --text: #E5E5E5;
+         --grey: #414141
          --darkgrey: #334041ff;
          --black: #1a2112ff;
+         --background: #26221C;
+
       }
 
       /* Set the height and width of the model viewers */
@@ -26,17 +30,26 @@
       }
 
       body {
-         background-color: var(--black);
-         color: var(--green);
+         background-color: var(--background);
+         color: var(--text);
       }
 
       .header_img {
          width: 100%;
       }
 
+      .col-md-6 {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+         top:0px;
+         height: auto;
+         background: linear-gradient(180deg, var(--background) 0%, #414141 19.27%), #414141;
+         box-shadow: 0px 100px 10px 7px rgba(20, 17, 15, 0.54);
+      }
+
       .entry {
-         background-color: var(--darkgrey);
-         color: var(--green);
+         color: var(--text);
       }
 
       model-viewer {
@@ -45,20 +58,8 @@
 
       .navbar {
          background-color: var(--darkgrey);
-      }
-
-      .window {
-         width: 100%;
-         height: 500px;
-         background-attachment: fixed;
-         background-size: 100%;
-      }
-
-      /* Set black background color, white text and some padding */
-      footer {
-         background-color: var(--darkgrey);
-         color: var(--white);
-         padding: 15px;
+         position: relative;
+         bottom: 0;
       }
 
       #main-container:first-child {
@@ -74,12 +75,12 @@
 
    <div class="row d-flex justify-content-center w-100">
       <div class="col-md-6" id="main-container">
-
+      
          <!--Kontainer for copy-pasting!!-->
          <div class="entry shadow p-3 mb-5 rounded">
             <h2>Robot Mark I</h2>
-            <model-viewer src="./filer/modeller/robot.glb" alt="A 3D model of the robot" auto-rotate
-               camera-controls></model-viewer>
+            <model-viewer src="./filer/modeller/robot.glb" alt="A 3D model of the robot" auto-rotate camera-controls>
+            </model-viewer>
             <hr>
             <h4>Intro</h4>
             <p>Denne roboten har fire hjul!!!</p>
@@ -95,26 +96,10 @@
       </div>
 
       <!-- Erstatt linken med filnavn for urørligt bilde-->
-      <div class="window" style="background-image: url(http://placekitten.com/1000);"></div>
-
-
-      <div class="pt-5 pb-5 p-3 m-5">
-         
-         <p>
-            tekst og sånt masse tekst
-         </p>
-      </div>
-
-      
-
-
+      <!--<div class="window" style="background-image: url(http://placekitten.com/1000);"></div>-->
 
    </div>
-
-
-
-
-   </div>
+   
 
    <nav class="navbar navbar-expand-lg navbar-dark">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
