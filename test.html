@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            color: #BABABA;
+            text-align: center;
+        }
+
+        .box {
+            background: #414141;
+            text-align: center;
+            width: 920px;
+            flex: auto;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .accordion {
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+        }
+
+        button {
+            color: #414141;
+        }
+
+        hr {
+            position: absolute;
+            width: 720px;
+            height: 0px;
+            left: calc(50% - 720px/2 + 7px);
+            top: 75px;
+
+            border: 1px solid #BABABA;
+        }
+
+        img {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Robot</h1>
+        <hr>
+        <img src="./filer/bilder/moon_bg-01.png" alt="moon" width="920px" , height="500px">
+        <p>
+            Tidlige designideer innebar å flytte brettet mens det befant seg foran roboten, men vi var redd for at den
+            høye vekten
+            av ferdigvokste søtpoteter ville velte roboten. Vi bestemte oss derfor for å utforske et design hvor
+            plantebrettet
+            sentreres over massesenteret til roboten slik at dette ikke lenger er en fare. For å kunne gjøre dette
+            designet vi et
+        </p>
+        <a class="accordion">Les mer</a>
+        <div class="panel">
+            <p>Beltesystemet viste seg å også løse det andre problemet som er knyttet til begrenset bevegelighet
+                mellom
+                hyllene. Ved å
+                benytte seg av beltesystemet trenger ikke roboten å bevege seg så mye mot og fra hyllene, noe som
+                gjør
+                at vi sparer
+                plass.</p>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
