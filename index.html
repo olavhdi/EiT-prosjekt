@@ -108,6 +108,15 @@
          border: 1px solid #BABABA;
          margin-top: 60px;
       }
+
+      video {
+         padding-top: 10px;
+         padding-bottom: 10px;
+         width: 100%;
+         height: 300;
+         margin-top: 2em;
+         margin-bottom: 2em;
+      }
    </style>
 </head>
 
@@ -135,7 +144,7 @@
                sentreres over massesenteret til roboten slik at dette ikke lenger er en fare. For å kunne gjøre dette
                designet vi et
             </p>
-            <a class="accordion">Les mer</a>
+            <a class="accordion" id='robot'>Les mer</a>
             <div class="panel">
                <p>beltesystem som roterer for blant annet å dra brettet ut av planteboksen og plassere det sentrert over
                   roboten. Hvis en
@@ -144,6 +153,7 @@
                   med en boks under der brettet sitter for å fange opp eventuelle poteter eller røtter som faller av.
                </p>
             </div>
+            <a class="accordion" id='robot2' style="display: none;">Skjul</a>
          </div>
 
 
@@ -161,7 +171,7 @@
                sentreres over massesenteret til roboten slik at dette ikke lenger er en fare. For å kunne gjøre dette
                designet vi et
             </p>
-            <a class="accordion">Les mer</a>
+            <a class="accordion" id='høsting'>Les mer</a>
             <div class="panel">
                <p>beltesystem som roterer for blant annet å dra brettet ut av planteboksen og plassere det sentrert over
                   roboten. Hvis en
@@ -170,6 +180,16 @@
                   med en boks under der brettet sitter for å fange opp eventuelle poteter eller røtter som faller av.
                </p>
             </div>
+            <a class="accordion" id='høsting2' style="display: none;">Skjul</a>
+         </div>
+
+         <div class="box">
+            <h1>Høsting animasjon</h1>
+            <hr>
+            <video controls>
+               <source src="filer/animasjoner/harvesting.webm" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
          </div>
 
          <div class="box">
@@ -186,7 +206,7 @@
                sentreres over massesenteret til roboten slik at dette ikke lenger er en fare. For å kunne gjøre dette
                designet vi et
             </p>
-            <a class="accordion">Les mer</a>
+            <a class="accordion" id='planting'>Les mer</a>
             <div class="panel">
                <p>beltesystem som roterer for blant annet å dra brettet ut av planteboksen og plassere det sentrert over
                   roboten. Hvis en
@@ -195,6 +215,7 @@
                   med en boks under der brettet sitter for å fange opp eventuelle poteter eller røtter som faller av.
                </p>
             </div>
+            <a class="accordion" id='planting2' style="display: none;">Skjul</a>
          </div>
 
       </div>
@@ -222,17 +243,27 @@
       </div>
    </nav>
    <script>
+      var readMore = true
       var acc = document.getElementsByClassName("accordion");
       var i;
-
       for (i = 0; i < acc.length; i++) {
          acc[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-               panel.style.display = "none";
-            } else {
-               panel.style.display = "block";
+            var panel2 = this.previousElementSibling;
+
+            if (panel) {
+               var id = this.id + '2'
+               panel.style.display = 'block'
+               document.getElementById(id).style.display = 'block'
+               document.getElementById(this.id).style.display = 'none'
+            }
+
+            else {
+               var id = (this.id).slice(0, -1)
+               panel2.style.display = 'none'
+               document.getElementById(id).style.display = 'block'
+               document.getElementById(this.id).style.display = 'none'
             }
          });
       }
