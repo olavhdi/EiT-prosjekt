@@ -23,7 +23,7 @@
       /* Set the height and width of the model viewers */
       model-viewer {
          width: 100%;
-         height: 300px;
+         height: 450px;
          margin-top: 2em;
          margin-bottom: 2em;
       }
@@ -81,6 +81,10 @@
          padding-top: 20px;
       }
 
+      p, p *, li, ul{
+         text-align: left;
+      }
+
       .accordion {
          color: white;
          cursor: pointer;
@@ -136,21 +140,19 @@
             <model-viewer src="./filer/modeller/robot.glb" alt="Robot 3D modell" auto-rotate camera-controls>
             </model-viewer>
             <p>
+               Denne autonome roboten er ment å frakte plantebrett rundt om i veksthuset. <br>
                Tidlige designideer innebar å flytte brettet mens det befant seg foran roboten, men vi var redd for at
-               den
-               høye vekten
-               av ferdigvokste søtpoteter ville velte roboten. Vi bestemte oss derfor for å utforske et design hvor
-               plantebrettet
-               sentreres over massesenteret til roboten slik at dette ikke lenger er en fare. For å kunne gjøre dette
-               designet vi et
+               den høye vekten av ferdigvokste søtpoteter ville velte roboten. Vi bestemte oss derfor for å utforske et design hvor
+               plantebrettet sentreres over massesenteret til roboten slik at dette ikke lenger er en fare.
             </p>
             <a class="accordion" id='robot'>Les mer</a>
             <div class="panel">
-               <p>beltesystem som roterer for blant annet å dra brettet ut av planteboksen og plassere det sentrert over
-                  roboten. Hvis en
-                  snur rotasjonsretningen på beltene vil brettet skli ut slik at det kan plasseres der det skal. Roboten
-                  er også utstyrt
-                  med en boks under der brettet sitter for å fange opp eventuelle poteter eller røtter som faller av.
+               <p>
+                  <ul>
+                    <li>Hydrauliske teleskoprør til vertikal forflytning</li>
+                    <li>Beltesystem for horisontal forflytning</li>
+                    <li>Mindre boks under brettet for å fange opp eventuelle poteter eller røtter</li>
+                  </ul>
                </p>
             </div>
             <a class="accordion" id='robot2' style="display: none;">Skjul</a>
@@ -163,21 +165,20 @@
             <model-viewer src="./filer/modeller/harvesting.glb" alt="Høsting 3D modell" auto-rotate camera-controls>
             </model-viewer>
             <p>
-               Tidlige designideer innebar å flytte brettet mens det befant seg foran roboten, men vi var redd for at
-               den
-               høye vekten
-               av ferdigvokste søtpoteter ville velte roboten. Vi bestemte oss derfor for å utforske et design hvor
-               plantebrettet
-               sentreres over massesenteret til roboten slik at dette ikke lenger er en fare. For å kunne gjøre dette
-               designet vi et
+               Utformingen av høstingsmaskinen tar utgangspunkt i at plantebrettet flyttes så lite som mulig, og at maskineriet har få bevegelige deler.
+               På animasjonen ser vi at bokser, som har like dimensjoner som plantebrettet, kommer på et rullebånd fra høyre.
+               Videre kuttes bladene til planten av med en kniv før de blir dyttet ned i boksen på transportroboten.
+               Etter dette kommer stemplene fra høstingsmaskinen og dytter de sådde potetene ut av hullene på plantebrettet.
             </p>
             <a class="accordion" id='høsting'>Les mer</a>
             <div class="panel">
-               <p>beltesystem som roterer for blant annet å dra brettet ut av planteboksen og plassere det sentrert over
-                  roboten. Hvis en
-                  snur rotasjonsretningen på beltene vil brettet skli ut slik at det kan plasseres der det skal. Roboten
-                  er også utstyrt
-                  med en boks under der brettet sitter for å fange opp eventuelle poteter eller røtter som faller av.
+               <p>
+                  <ul>
+                     <li>Knivblad som kutter av alt på oppsiden av plantebrettet</li>
+                     <li>Stempler som presser ut de sådde søtpotetene</li>
+                     <li>Transportroboten blir brukt under høstingsprosessen, som vist i animasjonsvideoen.</li>
+                     <li>Plantebrettet blir holdt godt på plass slik at det ikke oppstår komplikasjoner under høstingsprosessen. </li>
+                  </ul>
                </p>
             </div>
             <a class="accordion" id='høsting2' style="display: none;">Skjul</a>
@@ -199,21 +200,20 @@
             <model-viewer src="./filer/modeller/planting.glb" alt="Planting 3D modell" auto-rotate camera-controls>
             </model-viewer>
             <p>
-               Tidlige designideer innebar å flytte brettet mens det befant seg foran roboten, men vi var redd for at
-               den
-               høye vekten
-               av ferdigvokste søtpoteter ville velte roboten. Vi bestemte oss derfor for å utforske et design hvor
-               plantebrettet
-               sentreres over massesenteret til roboten slik at dette ikke lenger er en fare. For å kunne gjøre dette
-               designet vi et
+               Så-modulen har en enkel utforming og består av to bord med dimensjoner tilpasset plantebrettet og en robot arm.
+               Bordene er designet med et rammeverk med spor på sidene, dette gjør det mulig å skyve inn plantebrett og andre brett på en trygg og stabil måte.
+               Transportroboten kan skyve inn de nødvendige platene med en enkel bevegelse.
+               Oppbevaringsboksene til så-potetene er likt dimensjonert som plantebrettet, og er de samme som brukes i høstingsmodulen.
             </p>
             <a class="accordion" id='planting'>Les mer</a>
             <div class="panel">
-               <p>beltesystem som roterer for blant annet å dra brettet ut av planteboksen og plassere det sentrert over
-                  roboten. Hvis en
-                  snur rotasjonsretningen på beltene vil brettet skli ut slik at det kan plasseres der det skal. Roboten
-                  er også utstyrt
-                  med en boks under der brettet sitter for å fange opp eventuelle poteter eller røtter som faller av.
+               <p>
+                  <ul>
+                     <li>Basen til robotarmen er en roterende plate, som gir stor frihetsgrad</li>
+                     <li>Griper som skånsomt griper rundt søtpotetene og planter de på plantebrettet</li>
+                     <li>Armen er mobil, og kan flyttes ved hjelp av transport roboten (se animajson under).</li>
+                     <li>Det er også tenkt at armen kan utføre andre oppgaver, særlig relatert til vedlikehold</li>
+                  </ul>
                </p>
             </div>
             <a class="accordion" id='planting2' style="display: none;">Skjul</a>
@@ -235,22 +235,23 @@
             <model-viewer src="./filer/modeller/veksthus.glb" alt="Vekstboks 3D modell" auto-rotate camera-controls>
             </model-viewer>
             <p>
-               Tidlige designideer innebar å flytte brettet mens det befant seg foran roboten, men vi var redd for at
-               den
-               høye vekten
-               av ferdigvokste søtpoteter ville velte roboten. Vi bestemte oss derfor for å utforske et design hvor
-               plantebrettet
-               sentreres over massesenteret til roboten slik at dette ikke lenger er en fare. For å kunne gjøre dette
-               designet vi et
+               Planteveksten foregår i moduler kalt vekstmoduler, som er basert på et aeroponisk system.
+               Modulen består av en hylleseksjon med separerte skuffer kalt underskuffer.
+               Plantene plantes på en avtagbar plate som ligger oppå underskuffen.
+               Modulen er designet for å bruke så lite materiale som mulig, være enkel å vedlikeholde.
+               I tillegg bør plantene kunne adskilles for å forhindre spredning av sykdom.
             </p>
             <a class="accordion" id='vekst'>Les mer</a>
             <div class="panel">
                <p>
-                  beltesystem som roterer for blant annet å dra brettet ut av planteboksen og plassere det sentrert over
-                  roboten. Hvis en
-                  snur rotasjonsretningen på beltene vil brettet skli ut slik at det kan plasseres der det skal. Roboten
-                  er også utstyrt
-                  med en boks under der brettet sitter for å fange opp eventuelle poteter eller røtter som faller av.
+                  <ul>
+                     <li>Tar høyde for røtter som kan bli 60cm lange, og blader som kan ha en høyde på 20cm</li>
+                     <li>Platen har 24 hull, som da er tiltenkt 24 planter</li>
+                     <li>Hver plante har 30cm avstand til andre planter på brettet</li>
+                     <li>Plantebrettet kan enkelt skyves inn og ut av skuffen.</li>
+                     <li>Sprinklere er plassert slik at røttene kan vokse mellom de uten direkte kontakt.</li>
+                     <li>En av lukene er tatt bort fra modellen, for å vise disse sprinklerne</li>
+                  </ul>
                </p>
             </div>
             <a class="accordion" id='vekst2' style="display: none;">Skjul</a>
